@@ -1,0 +1,23 @@
+{% extends 'item/layout.html' %}
+
+{% block title %}Item List{% endblock title %}
+{% block content %}
+<div class="item_container">
+    
+        {% for item in item_list %}
+        <div class="items_item">
+        <div id="item">
+            <img src="{{item.image.url}}" alt="">
+            <h4><a href="{% url 'item:item_detail' item.pk %}"> {{ item.title }} </a></h4>
+            <p>가격: {{item.price}}</p>
+            <p>남은 수량: {{item.amount}}</p>
+            <div class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">+</button>
+            <button type="button" class="btn btn-secondary">-</button>
+            </div>
+        </div>
+        </div>
+        {% endfor %}
+
+</div>
+{% endblock %}

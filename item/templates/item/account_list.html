@@ -1,0 +1,16 @@
+{% extends 'item/layout.html' %}
+
+{% block title %}Account List{% endblock title %}
+{% block content %}
+
+<div class="account_container">
+        {% for account in account_list %}
+        <div class="accounts_item">
+            <h4><a href="{% url 'item:account_detail' account.pk %}"> {{ account.name }} </a></h4>
+            <hr>
+            <p>{{account.call}}<br/>
+            {{account.addr}}</p>
+        </div>
+        {% endfor %}
+</div>      
+{% endblock %}

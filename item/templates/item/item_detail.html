@@ -1,0 +1,21 @@
+{% extends 'item/layout.html' %}
+{% block title %}Item Detail{% endblock title %}
+{% block content %}
+    <div class="items_item">
+    <img src="{{item.image.url}}" alt="">    
+    <h2>{{item.title}}</h2>
+    가격: {{ item.price }} <br>
+    남은 수량: {{ item.amount }} <br>
+    제품 설명: <br> 
+        {{item.content}}<br>
+    거래처: {{ item.account }}
+    </div>
+    <hr>
+    <div class="right">
+    <a href="{% url 'item:item_delete' item.pk %}">삭제</a>
+        <div class="right_item">
+            <a href="{% url 'item:item_list' %}">목록</a>
+            <a href="{% url "item:item_edit" item.pk %}">수정</a>
+        </div>
+    </div>
+{% endblock content %}

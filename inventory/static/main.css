@@ -1,0 +1,60 @@
+
+div .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: cornsilk;
+}
+footer p {
+    color: grey;
+    font-size: 10px;
+}
+a {text-decoration: none;}
+
+.content h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.item_container {
+    display: flex;
+    max-width: 1200px; height:340px;
+    margin: 0 auto;
+    background-color: rgb(231, 231, 231);
+}
+
+.items_item {
+    margin: auto;
+    width:220px; height:300px;
+    background-color: white;
+}
+.items_item #item {
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+}
+
+.items_item #item img {
+    width: 100%;
+}
+
+
+
+.account_container {
+    display: flex;
+    max-width: 1200px; height:190px;
+    margin: 0 auto;
+
+}
+
+.accounts_item {
+    margin: auto;
+    width:300px; height:150px;
+    background-color:rgb(201, 238, 201);
+    padding: 20px;
+}
+.right {
+    display: flex;
+}
+.right .right_item {
+    margin-left: auto;
+}

@@ -1,0 +1,13 @@
+{% extends 'item/layout.html' %}
+
+{% block content %}
+
+    <h2>{{account.name}}</h2>
+    {{account.call}}
+    {{account.addr}}
+    <hr>
+<hr>
+    <a href="{% url 'item:account_detail' account.pk %}">삭제</a>
+    <a href="{% url 'item:account_list' %}">목록</a>
+    <a href="{% url 'item:account_edit' account.pk %}">수정</a>
+{% endblock content %}
